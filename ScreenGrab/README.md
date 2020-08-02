@@ -1,8 +1,9 @@
 ## movement detector macro
-This is a macro  designed to make mining large areas in Minecraft easier.
+ This is a macro  designed to make mining large areas in Minecraft easier.
 To use, Minecraft player must be facing exactly at -0.0 or 90.0 and point straight up, and hold the mining button (can be done in 1.14+ with the F3 + T trick).
-Currently the best way to pause it is to press F3 because the program will detect changes in the numbers (memory, particles, ect) and not move.
-The mask_vertices file contains the regions on the screen that will be considered in determining if the screen is changing;
+Run `MAIN masked movement detector.py` to start the macro, and then switch to the Minecraft tab. You could also use `OLD main basic movement detector.py` for a more basic version without masking, but it is not as reliable.
+Currently the best way to pause it is to press F3 because the program will detect changes in the numbers (memory, particles, ect) and not move.  
+ The mask_vertices file contains the regions on the screen that will be considered in determining if the screen is changing;
 It is designed for a 800x600 window in the center of my 1920x1080 monitor, so you may have to change the numbers around for different sized monitors.
 
 ### requirements
