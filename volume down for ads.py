@@ -1,3 +1,10 @@
+"""This program decreases Windows volume by a certain amount after a certain key is pressed,
+   then brings it back up after a certain time or after a certain button is pressed.
+   You can also press another button to bring up the console dialogue to change the amount.
+   Also it exits if a different certain key is pressed.
+   These keys can be seen in veriables: `exit_key` `down_key` `up_key` `change_key`
+"""
+
 import time
 ##import pyautogui
 ##print(pyautogui.KEYBOARD_KEYS)
