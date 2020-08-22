@@ -5,3 +5,5 @@ This is just a collection of some macros I made because I have found a need for 
 I plan to add a better description of each macro here, but the names should be self explanitory and there are comments inside to help you out.  
 
 The files ending in `.pyw` like `defaultCommands.pyw` are not actual macros but they are imported into others to make them more streamlined.
+
+These were made for Python 3.7 unless otherwise noted.
