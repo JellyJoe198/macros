@@ -7,3 +7,7 @@ I plan to add a better description of each macro here, but the names should be s
 The files ending in `.pyw` like `defaultCommands.pyw` are not actual macros but they are imported into others to make them more streamlined.
 
 These were made for Python 3.7 unless otherwise noted.
+
+
+### AutoHotkey
+these are not python but they are useful and not numerous enough for their own repository so i slapped them in here
