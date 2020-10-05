@@ -9,5 +9,5 @@ The files ending in `.pyw` like `defaultCommands.pyw` are not actual macros but 
 These were made for Python 3.7 unless otherwise noted.
 
 
-### AutoHotkey
-these are not python but they are useful and not numerous enough for their own repository so i slapped them in here
+## AutoHotkey
+these are not python but they are useful and not numerous enough for their own repository so i slapped them in here. The main thing is a macro I made for a numpad to add extra functionality
