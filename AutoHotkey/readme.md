@@ -1,7 +1,7 @@
 ### Numpad Hotkeys
 I got a new numpad and this macro adds a lot more functionality to it, like opening and closing tabs in a browser, copy/paste, and even typing letters through keycodes. 
 May need to be altered for different kinds of numpads.
-#### alt codes hotstrings
+#### alt codes hotstrings.py
 I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched it to make the lowercase 65-90 bc that is what is used more). It has the first 127 unicode alt codes right now.
 
 ### quotes and commas
