@@ -14,6 +14,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ! = Alt
 ; # = Windows
 
+
 ; NumpadClear:: Ctrl ; control also has some issues but that is prob my numpad not the program
 
 NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert.
@@ -49,18 +50,14 @@ NumpadClear & NumpadEnd:: Send ^{End}
 NumpadDel & Esc:: Send !{F4} ; close the window
 NumpadDel & Tab:: Send {blind}!{Tab} ; switch window. note: does not hold alt, must use Ctrl
 
-Launch_App2::
-currentWindow := WinExist("Calculator","Calculator")
-;MsgBox , %currentWindow%
-if WinExist(Calculator) {
-  MsgBox, 1 ,, close calculator?
-  IfMsgBox OK
-    WinClose , Calculator , , 2
-
-} else
-  MsgBox , noper
-  ControlSend , , {vkB7}
-  SendEvent {vkB7} ;{Launch_App2}
+; make app button toggle calculator instead of open new
+~Launch_App2::
+if WinExist("Calculator","Calculator") {
+    loop 2 {
+      Sleep 200
+      WinClose , Calculator , , 2
+    }
+}
 return
 
 ; math
