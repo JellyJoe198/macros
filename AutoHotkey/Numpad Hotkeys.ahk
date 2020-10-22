@@ -15,7 +15,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; # = Windows
 
 
-; NumpadClear:: Ctrl ; control also has some issues but that is prob my numpad not the program
+NumpadClear:: Ctrl ; control also has some issues but that is prob my numpad not the program
 
 NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert.
 NumpadDel:: Alt ; there are some issues with Alt.
@@ -46,14 +46,20 @@ NumpadClear & NumpadPgDn:: Send ^a
 NumpadClear & NumpadHome:: Send ^{Home} ; these shouldn't be needed if Clr is Ctrl but fo some reason it is.
 NumpadClear & NumpadEnd:: Send ^{End}
 
+; text selection
+NumpadIns & Tab:: +tab
+NumpadIns & NumpadLeft:: +left
+NumpadIns & NumpadRight:: +right
+
 ; windows
 NumpadDel & Esc:: Send !{F4} ; close the window
-NumpadDel & Tab:: Send {blind}!{Tab} ; switch window. note: does not hold alt, must use Ctrl
+NumpadDel & Tab:: AltTab
+; NumpadDel & Tab:: Send {blind}!{Tab} ; switch window. note: does not hold alt, must use Ctrl
 
 ; make app button toggle calculator instead of open new
 ~Launch_App2::
 if WinExist("Calculator","Calculator") {
-    loop 2 {
+    loop 2 { ; repeated to ensure it closes even during lag
       Sleep 200
       WinClose , Calculator , , 2
     }
@@ -64,8 +70,10 @@ return
 NumpadDel & NumpadUp:: Send {^} ; power sign
 NumpadDel & NumpadDown:: Send {x}
 
-; temporary for DeltaM
-; ,:: LButton
+; mouse
+NumpadIns & ,:: LButton ; click
+NumpadDel & ,:: AppsKey ; context menu (simulated right click context menu)
+
 
 :*:]t::  ; This hotstring replaces "]t" with the current date and time.
 FormatTime, CurrentDateTime,, MM/dd/yyyy HH:mm ; It will look like 9/1/2005 15:53
@@ -253,6 +261,134 @@ return
 ::00127::{⌂}
 
 
+::00128::{Ç}
+::00129::{ü}
+::00130::{é}
+::00131::{â}
+::00132::{ä}
+::00133::{à}
+::00134::{å}
+::00135::{ç}
+::00136::{ê}
+::00137::{ê}
+::00138::{è}
+::00139::{ï}
+::00140::{î}
+::00141::{ì}
+::00142::{Ä}
+::00143::{Å}
+::00144::{É}
+::00145::{æ}
+::00146::{Æ}
+::00147::{ô}
+::00148::{ö}
+::00149::{ò}
+::00150::{û}
+::00151::{ù}
+::00152::{ÿ}
+::00153::{Ö}
+::00154::{Ü}
+::00155::{¢}
+::00156::{£}
+::00157::{¥}
+::00158::{₧}
+::00159::{ƒ}
+::00160::{á}
+::00161::{í}
+::00162::{ó}
+::00163::{ú}
+::00164::{ñ}
+::00165::{Ñ}
+::00166::{ª}
+::00167::{º}
+::00168::{¿}
+::00169::{⌐}
+::00170::{¬}
+::00171::{½}
+::00172::{¼}
+::00173::{¡}
+::00174::{«}
+::00175::{»}
+::00176::{░}
+::00177::{▒}
+::00178::{▓}
+::00179::{│}
+::00180::{┤}
+::00181::{╡}
+::00182::{╢}
+::00183::{╖}
+::00184::{╕}
+::00185::{╣}
+::00186::{║}
+::00187::{╗}
+::00188::{╝}
+::00189::{╜}
+::00190::{╛}
+::00191::{┐}
+::00192::{└}
+::00193::{┴}
+::00194::{┬}
+::00195::{├}
+::00196::{─}
+::00197::{┼}
+::00198::{╞}
+::00199::{╟}
+::00200::{╚}
+::00201::{╔}
+::00202::{╩}
+::00203::{╦}
+::00204::{╠}
+::00205::{═}
+::00206::{╬}
+::00207::{╧}
+::00208::{╨}
+::00209::{╤}
+::00210::{╥}
+::00211::{╙}
+::00212::{╘}
+::00213::{╒}
+::00214::{╓}
+::00215::{╫}
+::00216::{╪}
+::00217::{┘}
+::00218::{┌}
+::00219::{█}
+::00220::{▄}
+::00221::{▌}
+::00222::{▐}
+::00223::{▀}
+::00224::{α}
+::00225::{ß}
+::00226::{Γ}
+::00227::{π}
+::00228::{Σ}
+::00229::{σ}
+::00230::{µ}
+::00231::{τ}
+::00232::{Φ}
+::00233::{Θ}
+::00234::{Ω}
+::00235::{δ}
+::00236::{∞}
+::00237::{φ}
+::00238::{ε}
+::00239::{∩}
+::00240::{≡}
+::00241::{±}
+::00242::{≥}
+::00243::{≤}
+::00244::{⌠}
+::00245::{⌡}
+::00246::{÷}
+::00247::{≈}
+::00248::{°}
+::00249::{∙}
+::00250::{·}
+::00251::{√}
+::00252::{ⁿ}
+::00253::{²}
+::00254::{■}
+::00255::{ }
 
 /* This is Ctrl letters with 1-26
 ::00,01::^{a}
