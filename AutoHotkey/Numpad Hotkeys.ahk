@@ -16,7 +16,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 NumpadClear:: Ctrl ; control also has some issues but that is prob my numpad not the program
 
-NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert (behind Numpad5).
+NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert (behind Numpad0).
 NumpadDel:: Alt ; there are some issues with Alt.
 
 ; browser commands
