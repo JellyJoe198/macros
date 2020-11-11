@@ -1,13 +1,12 @@
 ; This macro set is designed to be used with an external numpad, like [this link](https://www.amazon.com/Bluetooth-Rechargeable-Jelly-Comb-Shortcuts/dp/B07PTCDXBH/)
 ; a few of these may seem weird but this is just what I found useful. I tried to keep the hotkeys similar in location to a standard keyboard, but had to keep full Numpad fuctionality.
-; keys not yet used:  ,
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode InputThenPlay
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force ; Close previous instance when new instance starts.
-#Keyhistory 40 ; so it doesn't store too much key history. if inputting passwords you may want to lower this more bc that is a security risk.
+#Keyhistory 40 ; so it doesn't store too much key history. if inputting passwords you may want to lower this bc that is a security risk.
 
 ; ^ = Ctrl
 ; + = Shift
@@ -17,7 +16,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 NumpadClear:: Ctrl ; control also has some issues but that is prob my numpad not the program
 
-NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert.
+NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert (behind Numpad5).
 NumpadDel:: Alt ; there are some issues with Alt.
 
 ; browser commands
@@ -50,6 +49,8 @@ NumpadClear & NumpadEnd:: Send ^{End}
 NumpadIns & Tab:: +tab
 NumpadIns & NumpadLeft:: +left
 NumpadIns & NumpadRight:: +right
+NumpadIns & NumpadDown:: +down
+NumpadIns & NumpadUp:: +up
 
 ; windows
 NumpadDel & Esc:: Send !{F4} ; close the window
@@ -69,6 +70,13 @@ return
 ; math
 NumpadDel & NumpadUp:: Send {^} ; power sign
 NumpadDel & NumpadDown:: Send {x}
+
+; music
+NumpadDel & =:: Send {Media_Prev}
+NumpadDel & NumpadDiv:: Send {Media_Play_Pause}
+NumpadDel & NumpadMult:: Send {Media_Next}
+NumpadDel & (:: Send {Volume_Down}
+NumpadDel & ):: Send {Volume_Up}
 
 ; mouse
 NumpadIns & ,:: LButton ; click
@@ -419,7 +427,7 @@ return
 ::00,26::^{z}
 */
 
-; /* and This is Ctrl letters with the same codes as above
+/* and This is Ctrl letters with the same codes as above
 ::00,65::^{a}
 ::00,66::^{b}
 ::00,67::^{c}
@@ -446,6 +454,6 @@ return
 ::00,88::^{x}
 ::00,89::^{y}
 ::00,90::^{z}
-; */
+*/
 
 
