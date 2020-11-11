@@ -1,11 +1,11 @@
 ### Numpad Hotkeys
-I got a new numpad and this macro adds a lot more functionality to it, like opening and closing tabs in a browser, copy/paste, and even typing letters through keycodes.
+This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through keycodes. For a full list of the included macros, see the `.ahk` file.<br>
 The layout of my numpad is shown below.
 
 <img src="https://github.com/JellyJoe198/python-macros/blob/master/AutoHotkey/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
 
 #### alt codes hotstrings.py
-I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched it to make the lowercase 65-90 bc that is what is used more). It has the first 127 unicode alt codes right now.
+I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched it to make the lowercase 65-90 bc that is what is used more). The macro has the first 255 unicode windows alt codes.
 
 ### quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
