@@ -11,7 +11,9 @@ Examples:
 `0038` to `&`  
 `001.` to `☺`  
 `0025.` to `↓`  
-`00159` to `ƒ`
+`00159` to `ƒ`  
+`0069` to `e`  
+`000069` to `E`  
 
 ## quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
