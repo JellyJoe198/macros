@@ -5,7 +5,8 @@ The layout of my numpad is shown below.
 <img src="https://github.com/JellyJoe198/python-macros/blob/master/AutoHotkey/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
 
 #### alt codes hotstrings.py
-I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched it to make the lowercase 65-90 bc that is what is used more). The macro has the first 255 unicode windows alt codes.
+I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched the lowercase letters to 65-90 bc they are used more). This feature has the first 255 unicode windows alt codes.  
+Note: Some characters require an end character such as `.` or `enter` to enable 3 digit alt codes.
 
 ### quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
