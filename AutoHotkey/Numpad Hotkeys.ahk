@@ -66,14 +66,17 @@ if WinExist("Calculator","Calculator") { ; if calculator open, close calculator
     Run calc
 }
 return
-
+/*
 CapsLock::
 Reload
 return
-
+*/
 ; math
 NumpadDel & NumpadUp:: Send {^} ; power sign
 NumpadDel & NumpadDown:: Send {x}
+NumpadIns & $:: Send {:} ; colon :
+NumpadIns & (:: Send {`{} ; left curly bracket {
+NumpadIns & ):: Send {`}} ; right curly bracket }
 
 ; music
 NumpadDel & =:: Send {Media_Prev}
@@ -85,7 +88,7 @@ NumpadDel & $:: Send {Volume_Mute}
 
 ; mouse
 NumpadIns & ,:: LButton ; click
-NumpadDel & ,:: AppsKey ; context menu (simulated right click context menu)
+NumpadDel & ,:: AppsKey ; context menu (simulated right click)
 
 
 :*:]t::  ; This hotstring replaces "]t" with the current date and time.
