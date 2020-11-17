@@ -60,17 +60,21 @@ NumpadDel & Tab:: AltTab
 
 ; make app button toggle calculator instead of open new.
 Launch_App2::
-if WinExist("Calculator","Calculator") { ; if calculator open, close calculator
-    WinClose , Calculator , , 2
+if WinExist("Calculator","Calculator") {    ; if calculator open ...
+  if WinActive("Calculator","Calculator") { ; ... and active: close it.
+    WinClose
+  } else {                                  ; ... and inactive: switch to it.
+    WinActivate
+  }
 } else { ; otherwise start calculator
     Run calc
 }
 return
-/*
+
 CapsLock::
 Reload
 return
-*/
+
 ; math
 NumpadDel & NumpadUp:: Send {^} ; power sign
 NumpadDel & NumpadDown:: Send {x}
