@@ -1,9 +1,9 @@
-; This macro set is designed to be used with an external numpad, like [this link](https://www.amazon.com/Bluetooth-Rechargeable-Jelly-Comb-Shortcuts/dp/B07PTCDXBH/)
+﻿; This macro set is designed to be used with an external numpad, like [this link](https://www.amazon.com/Bluetooth-Rechargeable-Jelly-Comb-Shortcuts/dp/B07PTCDXBH/)
 ; a few of these may seem weird but this is just what I found useful. I tried to keep the hotkeys similar in location to a standard keyboard, but had to keep full Numpad fuctionality.
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode InputThenPlay
+;SendMode InputThenPlay
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force ; Close previous instance when new instance starts.
 #Keyhistory 40 ; so it doesn't store too much key history. if inputting passwords you may want to lower this bc that is a security risk.
@@ -14,39 +14,50 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; # = Windows
 
 ; ~ lets key through while activating macro.
+; * wildcard - other keys do not affect it
 
-NumpadClear:: Ctrl ; control also has some issues but that is prob my numpad not the program
+#InputLevel 1 ; using input levels to make these modifiers work outisde of hotkeys, not working yet.
+; these all have issues with not affecting the scripts below it.
+NumpadClear:: Ctrl
+NumpadIns:: Shift
+NumpadDel:: Alt
 
-NumpadIns:: Shift ; you can add shift to most blind macros by holding Insert (behind Numpad0).
-NumpadDel:: Alt ; there are some issues with Alt.
 
+CapsLock:: ; capslock will be the menu system to toggle certain features in the future.
+Suspend Toggle ;suspend other hotkeys while this runs.
+Reload
+return
+; uncomment to disable hotstrings
+; Numpad1::Numpad1
+;Numpad0::Numpad0
+
+#InputLevel 0
 ; browser commands
 NumpadClear & Esc:: Send {blind}^w
 NumpadClear & NumpadPgUp:: Send {blind}^t
 NumpadClear & Tab:: Send {blind}^{tab}
-; these are disabled bc using Numpad0 in hotkeys messes with the hotstrings.
-; Numpad0 & Tab:: Send +{Tab} ; shift tab when number mode is on.
-; Numpad0::Numpad0 ; this allows you to use hotkey and keep the button
-NumpadClear & NumpadAdd:: Send {blind}^{+}
-NumpadClear & NumpadSub:: Send {blind}^{-}
+NumpadClear & NumpadAdd:: Send {blind}^{+} ; zoom in
+NumpadClear & NumpadSub:: Send {blind}^{-} ; zoom out
+NumpadClear & NumpadPgDn:: ^r
 
-NumpadDel & NumpadLeft:: Send !{NumpadLeft} ; page left
-NumpadDel & NumpadRight:: Send !{NumpadRight} ; page right
+NumpadDel & NumpadLeft:: Send !{left} ; webpage back
+NumpadDel & NumpadRight:: Send !{right} ; webpage right
 ; text editing commands
 NumpadClear & NumpadRight:: Send, {blind}^{Right} ; word right
 NumpadClear & NumpadLeft:: Send, {blind}^{Left} ; word left
 
 NumpadClear & (:: Send ^z
 NumpadClear & ):: Send ^y
-NumpadClear & $:: Send {blind}^s
-NumpadClear & =:: Send ^x
-NumpadClear & NumpadDiv:: Send {blind}^c
+NumpadClear & $:: Send ^s
+NumpadClear & =:: Send ^x ; cut
+NumpadClear & NumpadDiv:: Send {blind}^c ; copy
 NumpadClear & NumpadMult:: Send {blind}^v
-NumpadClear & NumpadPgDn:: Send ^a
-NumpadClear & NumpadHome:: Send ^{Home} ; these shouldn't be needed if Clr is Ctrl but fo some reason it is.
+NumpadClear & NumpadHome:: Send ^{Home} ; these shouldnt be needed if Clr is Ctrl but fo some reason it is.
 NumpadClear & NumpadEnd:: Send ^{End}
+NumpadIns & NumpadPgDn:: ^a
+NumpadIns & NumpadPgUp:: ^f
 
-; text selection
+; text selection. these shouldnt be needed bc NumpadIns is already Shift, but it didn't work without.
 NumpadIns & Tab:: +tab
 NumpadIns & NumpadLeft:: +left
 NumpadIns & NumpadRight:: +right
@@ -56,23 +67,18 @@ NumpadIns & NumpadUp:: +up
 ; windows
 NumpadDel & Esc:: Send !{F4} ; close the window
 NumpadDel & Tab:: AltTab
-; NumpadDel & Tab:: Send {blind}!{Tab} ; switch window. note: does not hold alt, must use Ctrl
 
 ; make app button toggle calculator instead of open new.
 Launch_App2::
 if WinExist("Calculator","Calculator") {    ; if calculator open ...
   if WinActive("Calculator","Calculator") { ; ... and active: close it.
     WinClose
-  } else {                                  ; ... and inactive: switch to it.
+  } else {                            ; ... and inactive: switch to it.
     WinActivate
   }
 } else { ; otherwise start calculator
     Run calc
 }
-return
-
-CapsLock::
-Reload
 return
 
 ; math
@@ -89,6 +95,10 @@ NumpadDel & NumpadMult:: Send {Media_Next}
 NumpadDel & (:: Send {Volume_Down}
 NumpadDel & ):: Send {Volume_Up}
 NumpadDel & $:: Send {Volume_Mute}
+#If WinActive("Spotify") ; openFold spotify: navigate ±15 sec
+  NumpadDel & NumpadLeft:: Send ^+{left}  ; ctrl shift left
+  NumpadDel & NumpadRight::Send ^+{right}
+#If ; endFold spotify
 
 ; mouse
 NumpadIns & ,:: LButton ; click
@@ -96,12 +106,12 @@ NumpadDel & ,:: AppsKey ; context menu (simulated right click)
 
 
 :*:]t::  ; This hotstring replaces "]t" with the current date and time.
-FormatTime, CurrentDateTime,, MM/dd/yyyy HH:mm ; It will look like 9/1/2005 15:53
+FormatTime, CurrentDateTime,, MM/dd/yyyy HH:mm ; It will look like: 9/1/2005 15:53
 SendInput %CurrentDateTime%
 return
 
 :*:]d::  ; This hotstring replaces "]d" with only the current date.
-FormatTime, CurrentDateTime,, MMMM d  ; It will look like September 4
+FormatTime, CurrentDateTime,, MMMM d  ; It will look like: September 4
 SendInput %CurrentDateTime%
 return
 /*
@@ -111,12 +121,13 @@ SendInput %CurrentDateTime%
 return
 */
 
-; this next section is hotstrings corresponding to alt codes. generated by Python, may be wrong.
+; the next section is hotstrings corresponding to alt codes. generated by Python, may be wrong.
 
 #Hotstring ? O ;allow other chars before, don't show endChar if used
 #Hotstring EndChars .`n `t+-*/=
 
-;#Hotstring *0 ; some hotstrings must have an endChar so they don't interfere with longer hotstrings.
+#Hotstring *0 ; some hotstrings must have an endChar so they don't interfere with longer hotstrings.
+ ; note: brackets are required to ensure UTF-8 formatting.
 ::001::{☺}
 ::002::{☻}
 ::003::{♥}
@@ -143,6 +154,9 @@ return
 ::0023::{↨}
 ::0024::{↑}
 ::0025::{↓}
+
+#Hotstring * ;hotstrings below this will not need an endChar.
+
 ::0026::{→}
 ::0027::{←}
 ::0028::{∟}
@@ -150,7 +164,6 @@ return
 ::0030::{▲}
 ::0031::{▼}
 
-#Hotstring * ;hotstrings below this will not need an endChar.
 ::0032::{space}
 ::0033::{!}
 ::0034::{"}
@@ -186,7 +199,7 @@ return
 ::0064::{@}
 
 ; included shortcut: 4 zeros instead of 2 makes letter capital. You don't have to remember as many codes or do math.
-#Hotstring *
+;#Hotstring *
 ::000065::{A}
 ::000066::{B}
 ::000067::{C}
@@ -240,7 +253,7 @@ return
 ::0089::{y}
 ::0090::{z}
 
-#Hotstring *
+;#Hotstring *
 ; the next characters
 ::0091::{[}
 ::0092::{\}
