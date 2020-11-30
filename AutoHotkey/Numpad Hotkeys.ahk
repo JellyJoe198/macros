@@ -154,6 +154,9 @@ return
 ::0023::{↨}
 ::0024::{↑}
 ::0025::{↓}
+
+#Hotstring * ;hotstrings below this will not need an endChar.
+
 ::0026::{→}
 ::0027::{←}
 ::0028::{∟}
@@ -161,7 +164,6 @@ return
 ::0030::{▲}
 ::0031::{▼}
 
-#Hotstring * ;hotstrings below this will not need an endChar.
 ::0032::{space}
 ::0033::{!}
 ::0034::{"}
