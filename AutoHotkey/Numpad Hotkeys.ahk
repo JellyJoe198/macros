@@ -16,7 +16,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ~ lets key through while activating macro.
 ; * wildcard - other keys do not affect it
 
-#InputLevel 1
+#InputLevel 1 ; using input levels to make these modifiers work outisde of hotkeys, not working yet.
 ; these all have issues with not affecting the scripts below it.
 NumpadClear:: Ctrl
 NumpadIns:: Shift

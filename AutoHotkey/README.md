@@ -6,7 +6,7 @@ The layout of my numpad is shown below.
 
 ### alt codes hotstrings.py
 I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched the lowercase letters to 65-90 bc they are used more). This feature has the first 255 unicode windows alt codes.  
-Note: Some characters require an end character such as `.` or `enter` in order to allow 3 digit alt codes as well. Examples below.  
+Note: Some characters require an end character such as `.` or `enter` in order to allow 3 digit alt codes as well. May require UTF-8 to correctly show emojis. Examples below.  
 
 Input | character  
 -- | --
@@ -16,6 +16,8 @@ Input | character
 `00159` | `ƒ`  
 `0069` | `e`  
 `000069` | `E`  
+
+There are also some pictures to help you with the windows alt codes, titled `unicode guide ... .png`. Choose the version that suits you better, and if you like them you could even set it as your desktop for easy reference.
 
 ## quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
