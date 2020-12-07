@@ -42,9 +42,8 @@ NumpadClear & NumpadPgDn:: ^r
 
 NumpadDel & NumpadLeft:: Send !{left} ; webpage back
 NumpadDel & NumpadRight:: Send !{right} ; webpage right
+
 ; text editing commands
-NumpadClear & NumpadRight:: Send, {blind}^{Right} ; word right
-NumpadClear & NumpadLeft:: Send, {blind}^{Left} ; word left
 
 NumpadClear & (:: Send ^z
 NumpadClear & ):: Send ^y
@@ -52,12 +51,15 @@ NumpadClear & $:: Send ^s
 NumpadClear & =:: Send ^x ; cut
 NumpadClear & NumpadDiv:: Send {blind}^c ; copy
 NumpadClear & NumpadMult:: Send {blind}^v
-NumpadClear & NumpadHome:: Send ^{Home} ; these shouldnt be needed if Clr is Ctrl but fo some reason it is.
-NumpadClear & NumpadEnd:: Send ^{End}
 NumpadIns & NumpadPgDn:: ^a
 NumpadIns & NumpadPgUp:: ^f
-
+NumpadClear & NumpadHome:: Send ^{Home} ; direct macros shouldn't be needed but it didn't work without.
+NumpadClear & NumpadEnd:: Send ^{End}
+NumpadClear & NumpadRight:: Send, {blind}^{Right} ; word right
+NumpadClear & NumpadLeft:: Send, {blind}^{Left} ; word left
 ; text selection. these shouldnt be needed bc NumpadIns is already Shift, but it didn't work without.
+NumpadIns & NumpadHome:: Send +{Home}
+NumpadIns & NumpadEnd:: Send +{End}
 NumpadIns & Tab:: +tab
 NumpadIns & NumpadLeft:: +left
 NumpadIns & NumpadRight:: +right
@@ -84,6 +86,7 @@ return
 ; math
 NumpadDel & NumpadUp:: Send {^} ; power sign
 NumpadDel & NumpadDown:: Send {x}
+NumpadDel & NumpadPgDn:: Send {y}
 NumpadIns & $:: Send {:} ; colon :
 NumpadIns & (:: Send {`{} ; left curly bracket {
 NumpadIns & ):: Send {`}} ; right curly bracket }
@@ -98,7 +101,14 @@ NumpadDel & $:: Send {Volume_Mute}
 #If WinActive("Spotify") ; openFold spotify: navigate ±15 sec
   NumpadDel & NumpadLeft:: Send ^+{left}  ; ctrl shift left
   NumpadDel & NumpadRight::Send ^+{right}
-#If ; endFold spotify
+
+#If WinExist("ahk_class Winamp v1.x") ; endFold openFold WinAmp
+; the WinExist above has set the "last found" window for use below.
+NumpadDel & =:: ControlSend, ahk_parent, z  ; back
+NumpadDel & NumpadDiv:: ControlSend, ahk_parent, c  ; Pause/Unpause
+NumpadDel & NumpadMult:: ControlSend, ahk_parent, b  ; next
+NumpadDel & Backspace:: ControlSend, ahk_parent, ^v  ; stop after current track
+#If ; endFold WinAmp
 
 ; mouse
 NumpadIns & ,:: LButton ; click
