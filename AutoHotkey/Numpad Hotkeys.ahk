@@ -12,11 +12,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; + = Shift
 ; ! = Alt
 ; # = Windows
-
 ; ~ lets key through while activating macro.
 ; * wildcard - other keys do not affect it
 
-#InputLevel 1 ; using input levels to make these modifiers work outisde of hotkeys, not working yet.
+#InputLevel 1 ; using input levels to make these modifiers work outisde of hotkeys, not working yet. High numbers are higher precedence?
 ; these all have issues with not affecting the scripts below it.
 NumpadClear:: Ctrl
 NumpadIns:: Shift
@@ -44,7 +43,7 @@ NumpadDel & NumpadLeft:: Send !{left} ; webpage back
 NumpadDel & NumpadRight:: Send !{right} ; webpage right
 
 NumpadIns & NumpadPgDn:: ^f  ;^a
-NumpadIns & NumpadPgUp:: Send {blind}+^t  ;this is only here to allow ctrl+shift+t
+; NumpadIns & NumpadPgUp:: Send {blind}+^t  ;this is only here to allow ctrl+shift+t
 
 NumpadIns & NumpadEnter:: Send +{enter}  ; mostly for the find menu
 
@@ -56,21 +55,27 @@ NumpadClear & $:: Send ^s
 NumpadClear & =:: Send ^x ; cut
 NumpadClear & NumpadDiv:: Send {blind}^c ; copy
 NumpadClear & NumpadMult:: Send {blind}^v
-NumpadClear & NumpadHome:: Send ^{Home} ; direct macros shouldn't be needed but it didn't work without.
+NumpadClear & NumpadHome:: Send ^{Home} ; shouldn't be needed but it didn't work without.
 NumpadClear & NumpadEnd:: Send ^{End}
-NumpadClear & NumpadRight:: Send, {blind}^{Right} ; word right
-NumpadClear & NumpadLeft:: Send, {blind}^{Left} ; word left
-; text selection. these shouldnt be needed bc NumpadIns is already Shift, but it didn't work without.
+NumpadClear & NumpadRight:: Send, {blind}^{Right} ; Ctrl right
+NumpadClear & NumpadLeft:: Send, {blind}^{Left} ; Ctrl left
+NumpadClear & NumpadUp:: Send, {blind}^{Up} ; Ctrl Up
+NumpadClear & NumpadDown:: Send, {blind}^{Down} ; Ctrl Down
+; text selection. these shouldnt be needed but it didn't work without.
 NumpadIns & NumpadHome:: Send +{Home}
 NumpadIns & NumpadEnd:: Send +{End}
-NumpadIns & Tab:: +tab
-NumpadIns & NumpadLeft:: +left
-NumpadIns & NumpadRight:: +right
-NumpadIns & NumpadDown:: +down
-NumpadIns & NumpadUp:: +up
+NumpadIns & Tab:: Send {blind}+{Tab}
+NumpadIns & NumpadRight:: Send {blind}+{Right}
+NumpadIns & NumpadLeft:: Send {blind}+{Left}
+NumpadIns & NumpadDown:: Send {blind}+{down}
+NumpadIns & NumpadUp:: Send {blind}+{up}
+NumpadClear & Backspace:: Send {blind}^{Backspace}
+NumpadClear & Del:: Send {blind}^{Del}
 
 ; windows
-NumpadDel & Esc:: Send !{F4} ; close the window
+NumpadIns & Esc:: Send {RWin}
+^+w::
+NumpadDel & Esc:: Send !{F4} ; close the window  on either .esc or CtrlShift W
 NumpadDel & Tab:: AltTab
 
 ; make app button toggle calculator instead of open new.
@@ -150,7 +155,7 @@ return
 #Hotstring EndChars .`n `t+-*/=
 
 #Hotstring *0 ; some hotstrings must have an endChar so they don't interfere with longer hotstrings.
- ; note: brackets are required to ensure UTF-8 formatting.
+ ; note: brackets `{}` ensure UTF-8 formatting.
 ::001::{☺}
 ::002::{☻}
 ::003::{♥}
