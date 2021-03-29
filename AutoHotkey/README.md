@@ -1,5 +1,5 @@
 ## Numpad Hotkeys
-This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through keycodes (will be thumbscript in future version). For a full list of the included macros, see the `.ahk` file.<br>
+This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through keycodes (will be thumbscript in future version). For a full list of the included hotkeys, see the `.ahk` file.<br>
 The layout of my numpad is shown below.
 
 <img src="https://github.com/JellyJoe198/python-macros/blob/master/AutoHotkey/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
