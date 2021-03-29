@@ -1,5 +1,5 @@
 ## Numpad Hotkeys
-This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through keycodes. For a full list of the included macros, see the `.ahk` file.<br>
+This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through keycodes (will be thumbscript in future version). For a full list of the included macros, see the `.ahk` file.<br>
 The layout of my numpad is shown below.
 
 <img src="https://github.com/JellyJoe198/python-macros/blob/master/AutoHotkey/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
@@ -20,6 +20,8 @@ Input | character
 `000069` | `E`  
 
 There are also some pictures to help you with the windows alt codes, titled `unicode guide ... .png`. Choose the version that suits you better, and if you like them you could even set it as your desktop for easy reference.
+
+Note: ThumbScript will be implemented in a future version for typing letters by shape. http://thumbscript.com/howitworks.html
 
 ## quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
