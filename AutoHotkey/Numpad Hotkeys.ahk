@@ -1,4 +1,4 @@
-﻿; This macro set is designed to be used with an external numpad, like [this link](https://www.amazon.com/Bluetooth-Rechargeable-Jelly-Comb-Shortcuts/dp/B07PTCDXBH/)
+﻿; This macro set [GitHub link](https://github.com/JellyJoe198/macros/tree/master/AutoHotkey) is designed to be used with an external numpad, like [this link](https://www.amazon.com/Bluetooth-Rechargeable-Jelly-Comb-Shortcuts/dp/B07PTCDXBH/)
 ; a few of these may seem weird but this is just what I found useful. I tried to keep the hotkeys similar in location to a standard keyboard, but had to keep full Numpad fuctionality.
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
@@ -6,7 +6,7 @@
 ;SendMode InputThenPlay
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance Force ; Close previous instance when new instance starts.
-#Keyhistory 40 ; so it doesn't store too much key history. if inputting passwords you may want to lower this bc that is a security risk.
+#Keyhistory 40 ; How many keystrokes to store in the history.
 
 ; ^ = Ctrl
 ; + = Shift
@@ -15,22 +15,33 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; ~ lets key through while activating macro.
 ; * wildcard - other keys do not affect it
 
-#InputLevel 1 ; using input levels to make these modifiers work outisde of hotkeys, not working yet. High numbers are higher precedence?
+#InputLevel 0 ; using input levels to make these modifiers work outisde of hotkeys, not working yet. lower numbers are higher precedence?
 ; these all have issues with not affecting the scripts below it.
 NumpadClear:: Ctrl
 NumpadIns:: Shift
 NumpadDel:: Alt
 
 
-CapsLock:: ; capslock will be the menu system to toggle certain features in the future.
-Suspend Toggle ;suspend other hotkeys while this runs.
+NumpadIns & Esc:: Send {RWin} ; windows key
+
+CapsLock:: ; will be the menu system to toggle certain features in the future. For now it activates a plugin.
+Suspend Toggle ;suspend other hotkeys while this subprogram runs.
+RunWait, D:/Programs/Python/python37/My Documents/macros/AutoHotkey/plugins/wait to click.ahk
+
+WaitingprogramLabel: ;if the subroutine "wait to click" is open, stay in this loop. openFold
+loop 2 { ; repeat twice to avoid accidental errors
+    Sleep 1000
+    if WinExist("wait to click")
+        GoTo WaitingprogramLabel
+} ;closeFold
 Reload
 return
-; uncomment to disable hotstrings
-; Numpad1::Numpad1
-;Numpad0::Numpad0
 
-#InputLevel 0
+;Numpad0::Numpad0  ; uncomment to disable hotstrings
+
+*^q:: Send !+5  ; ctrl q = ctrl alt 5  for strikethrough in google docs.
+
+#InputLevel 1
 ; browser commands
 NumpadClear & Esc:: Send {blind}^w
 NumpadClear & NumpadPgUp:: Send {blind}^t
@@ -42,8 +53,8 @@ NumpadClear & NumpadPgDn:: ^r
 NumpadDel & NumpadLeft:: Send !{left} ; webpage back
 NumpadDel & NumpadRight:: Send !{right} ; webpage right
 
-NumpadIns & NumpadPgDn:: ^f  ;^a
-; NumpadIns & NumpadPgUp:: Send {blind}+^t  ;this is only here to allow ctrl+shift+t
+NumpadIns & NumpadPgDn:: ^f
+NumpadIns & NumpadPgUp:: !d
 
 NumpadIns & NumpadEnter:: Send +{enter}  ; mostly for the find menu
 
@@ -72,10 +83,7 @@ NumpadIns & NumpadUp:: Send {blind}+{up}
 NumpadClear & Backspace:: Send {blind}^{Backspace}
 NumpadClear & Del:: Send {blind}^{Del}
 
-; windows
-NumpadIns & Esc:: Send {RWin}
-^+w::
-NumpadDel & Esc:: Send !{F4} ; close the window  on either .esc or CtrlShift W
+NumpadDel & Esc:: Send !{F4} ; close the window
 NumpadDel & Tab:: AltTab
 
 ; make app button toggle calculator instead of open new.
@@ -93,6 +101,7 @@ return
 
 ; math
 NumpadDel & NumpadUp:: Send {^} ; power sign
+NumpadDel & NumpadPgUp:: Send pi
 NumpadDel & NumpadDown:: Send {x}
 NumpadDel & NumpadPgDn:: Send {y}
 NumpadIns & $:: Send {:} ; colon :
@@ -451,7 +460,7 @@ return
 ::00254::{■}
 ::00255::{ }
 
-/* This is Ctrl letters with 1-26
+/* ; This is Ctrl letters with 1-26
 ::00,01::^{a}
 ::00,02::^{b}
 ::00,03::^{c}
@@ -480,7 +489,7 @@ return
 ::00,26::^{z}
 */
 
-/* and This is Ctrl letters with the same codes as above
+/* ; and This is Ctrl letters with the same codes as above
 ::00,65::^{a}
 ::00,66::^{b}
 ::00,67::^{c}
