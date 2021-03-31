@@ -9,4 +9,4 @@ I plan to add a better description of each macro here, but the names should be s
 
 The files ending in `.pyw` like `defaultCommands.pyw` are not actual macros but they are imported into others to make them more streamlined.  
 
-Made for Python 3.7 unless otherwise noted. MIT Licenced unless otherwise noted.
+Made for Python 3.7 unless otherwise noted.
