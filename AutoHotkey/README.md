@@ -26,7 +26,7 @@ http://thumbscript.com/howitworks.html
 <img src="http://thumbscript.com/images/abcd.gif" alt="ABCD Thumbscript example" height=50></img>
 
 ThumbScript is a typing system that allows you to press any letter by drawing its shape with 2 presses on the numpad.  
-This is my improved version of the [beta thumbscript autohotkey script] (http://autohotkey.com/board/topic/27198-beta-thumbscript-ahk). I added a few commands that were indicated on the [thumbscript wiki] (http://thumbscript.com/howitworks.html) but not the beta script.  
+This is my improved version of the [beta thumbscript autohotkey script](http://autohotkey.com/board/topic/27198-beta-thumbscript-ahk). I added a few commands that were indicated on the [thumbscript wiki](http://thumbscript.com/howitworks.html) but not the beta script.  
 I also added 2 more characters:  
 `B` backwards is `¿`  (this is mirror image of `?`)  
 `h` backwards is `{space}`  
