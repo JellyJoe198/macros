@@ -21,7 +21,19 @@ Input | character
 
 There are also some pictures to help you with the windows alt codes, titled `unicode guide ... .png`. Choose the version that suits you better, and if you like them you could even set it as your desktop for easy reference.
 
-Note: ThumbScript will be implemented in a future version for typing letters by shape. http://thumbscript.com/howitworks.html
+## Thumbscript.ahk
+http://thumbscript.com/howitworks.html  
+<img source="http://thumbscript.com/images/abcd.gif"></img>
+
+ThumbScript is a typing system that allows you to press any letter by drawing its shape with 2 presses on the numpad.  
+This is my improved version of the [beta thumbscript autohotkey script] (http://autohotkey.com/board/topic/27198-beta-thumbscript-ahk). I added a few commands that were indicated on the [thumbscript wiki] (http://thumbscript.com/howitworks.html) but not the beta script.  
+I also added 2 more characters:  
+`B` backwards is `¿`  (this is mirror image of `?`)
+`h` backwards is `{space}`
+
+Functions not yet implemented:  
+* single tap commands (for now just double tap the key)
+* Control key (currently does nothing)(I plan to make it behave like ctrl+letter, which is different from the website but IMO more useful for desktop use)
 
 ## quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
