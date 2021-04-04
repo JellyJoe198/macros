@@ -1,0 +1,64 @@
+<NotepadPlus>
+    <UserLang name="AutoHotkey" ext="ahk" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="yes" allowFoldOfComments="yes" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Comments">00; 01 02 03/* 04*/</Keywords>
+            <Keywords name="Numbers, prefix1"></Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
+            <Keywords name="Numbers, extras2"></Keywords>
+            <Keywords name="Numbers, suffix1"></Keywords>
+            <Keywords name="Numbers, suffix2"></Keywords>
+            <Keywords name="Numbers, range"></Keywords>
+            <Keywords name="Operators1">^ + ! : , ( ) * ~</Keywords>
+            <Keywords name="Operators2">&amp;</Keywords>
+            <Keywords name="Folders in code1, open"></Keywords>
+            <Keywords name="Folders in code1, middle"></Keywords>
+            <Keywords name="Folders in code1, close"></Keywords>
+            <Keywords name="Folders in code2, open"></Keywords>
+            <Keywords name="Folders in code2, middle"></Keywords>
+            <Keywords name="Folders in code2, close"></Keywords>
+            <Keywords name="Folders in comment, open">startFold StartFold openFold OpenFold</Keywords>
+            <Keywords name="Folders in comment, middle"></Keywords>
+            <Keywords name="Folders in comment, close">endFold EndFold closeFold CloseFold</Keywords>
+            <Keywords name="Keywords1">return if else loop until while continue &#x000D;&#x000A;try catch throw finally&#x000D;&#x000A;true false&#x000D;&#x000A;Break for Goto GoSub &#x000D;&#x000A;between and in&#x000D;&#x000A;If IfEqual IfExist IfGreater IfGreaterOrEqual IfInString IfLess IfLessOrEqual IfMsgBox IfNotEqual IfNotExist IfNotInString IfWinActive IfWinExist IfWinNotActive IfWinNotExist</Keywords>
+            <Keywords name="Keywords2">Abs ACos Array Asc ASin ATan AutoTrim BlockInput Break Catch Ceil Chr Click ClipWait ComObjActive ComObjArray ComObjConnect ComObjCreate ComObject ComObjEnwrap ComObjError ComObjFlags ComObjGet ComObjMissing ComObjParameter ComObjQuery ComObjType ComObjUnwrap ComObjValue Continue Control ControlClick ControlFocus ControlGet ControlGetFocus ControlGetPos ControlGetText ControlMove ControlSend ControlSendRaw ControlSetText CoordMode Cos Critical DetectHiddenText DetectHiddenWindows DllCall Drive DriveGet DriveSpaceFree Edit Else EnvAdd EnvDiv EnvGet EnvMult EnvSet EnvSub EnvUpdate Exception Exit ExitApp Exp FileAppend FileCopy FileCopyDir FileCreateDir FileCreateShortcut FileDelete FileEncoding FileExist FileGetAttrib FileGetShortcut FileGetSize FileGetTime FileGetVersion FileInstall FileMove FileMoveDir FileOpen FileRead FileReadLine FileRecycle FileRecycleEmpty FileRemoveDir FileSelectFile FileSelectFolder FileSetAttrib FileSetTime Finally Floor For Format FormatTime Func GetKeyName GetKeySC GetKeyState GetKeyVK Gosub Goto GroupActivate GroupAdd GroupClose GroupDeactivate Gui GuiControl GuiControlGet Hotkey Hotstring If IfEqual IfExist IfGreater IfGreaterOrEqual IfInString IfLess IfLessOrEqual IfMsgBox IfNotEqual IfNotExist IfNotInString IfWinActive IfWinExist IfWinNotActive IfWinNotExist IL_Add IL_Create IL_Destroy ImageSearch IniDelete IniRead IniWrite Input InputBox InputHook InStr IsByRef IsFunc IsLabel IsObject KeyHistory KeyWait ListHotkeys ListLines ListVars Ln LoadPicture Log Loop LTrim LV_Add LV_Delete LV_DeleteCol LV_GetCount LV_GetNext LV_GetText LV_Insert LV_InsertCol LV_Modify LV_ModifyCol LV_SetImageList Max Menu MenuGetHandle MenuGetName Min Mod MouseClick MouseClickDrag MouseGetPos MouseMove MsgBox NumGet NumPut ObjAddRef ObjBindMethod ObjClone ObjCount ObjDelete Object ObjGetAddress ObjGetBase ObjGetCapacity ObjHasKey ObjInsert ObjInsertAt ObjLength ObjMaxIndex ObjMinIndex ObjNewEnum ObjPop ObjPush ObjRawGet ObjRawSet ObjRelease ObjRemove ObjRemoveAt ObjSetBase ObjSetCapacity OnClipboardChange OnError OnExit OnMessage Ord OutputDebug Pause PixelGetColor PixelSearch PostMessage Process Progress Random RegDelete RegExMatch RegExReplace RegisterCallback RegRead RegWrite Reload Return Round RTrim Run RunAs RunWait SB_SetIcon SB_SetParts SB_SetText Send SendEvent SendInput SendLevel SendMessage SendMode SendPlay SendRaw SetBatchLines SetCapsLockState SetControlDelay SetDefaultMouseSpeed SetEnv SetFormat SetKeyDelay SetMouseDelay SetNumLockState SetRegView SetScrollLockState SetStoreCapsLockMode SetTimer SetTitleMatchMode SetWinDelay SetWorkingDir Shutdown Sin Sleep Sort SoundBeep SoundGet SoundGetWaveVolume SoundPlay SoundSet SoundSetWaveVolume SplashImage SplashTextOff SplashTextOn SplitPath Sqrt StatusBarGetText StatusBarWait StrGet StringCaseSense StringGetPos StringLeft StringLen StringLower StringMid StringReplace StringRight StringSplit StringTrimLeft StringTrimRight StringUpper StrLen StrPut StrReplace StrSplit SubStr Suspend Switch SysGet Tan Thread Throw ToolTip Transform TrayTip Trim Try TV_Add TV_Delete TV_Get TV_GetChild TV_GetCount TV_GetNext TV_GetParent TV_GetPrev TV_GetSelection TV_GetText TV_Modify TV_SetImageList Until UrlDownloadToFile VarSetCapacity While WinActivate WinActivateBottom WinActive WinClose WinExist WinGet WinGetActiveStats WinGetActiveTitle WinGetClass WinGetPos WinGetText WinGetTitle WinHide WinKill WinMaximize WinMenuSelectItem WinMinimize WinMinimizeAll WinMinimizeAllUndo WinMove WinRestore WinSet WinSetTitle WinShow WinWait WinWaitActive WinWaitClose WinWaitNotActive</Keywords>
+            <Keywords name="Keywords3">#ClipboardTimeout&#x000D;&#x000A;#CommentFlag&#x000D;&#x000A;#Delimiter&#x000D;&#x000A;#DerefChar&#x000D;&#x000A;#ErrorStdOut&#x000D;&#x000A;#EscapeChar&#x000D;&#x000A;#HotkeyInterval&#x000D;&#x000A;#HotkeyModifierTimeout&#x000D;&#x000A;#Hotstring&#x000D;&#x000A;#If&#x000D;&#x000A;#IfTimeout&#x000D;&#x000A;#IfWinActive&#x000D;&#x000A;#IfWinExist&#x000D;&#x000A;#IfWinNotActive&#x000D;&#x000A;#IfWinNotExist&#x000D;&#x000A;#Include&#x000D;&#x000A;#IncludeAgain&#x000D;&#x000A;#InputLevel&#x000D;&#x000A;#InstallKeybdHook&#x000D;&#x000A;#InstallMouseHook&#x000D;&#x000A;#KeyHistory&#x000D;&#x000A;#LTrim&#x000D;&#x000A;#MaxHotkeysPerInterval&#x000D;&#x000A;#MaxMem&#x000D;&#x000A;#MaxThreads&#x000D;&#x000A;#MaxThreadsBuffer&#x000D;&#x000A;#MaxThreadsPerHotkey&#x000D;&#x000A;#MenuMaskKey&#x000D;&#x000A;#NoEnv&#x000D;&#x000A;#NoTrayIcon&#x000D;&#x000A;#Persistent&#x000D;&#x000A;#Requires&#x000D;&#x000A;#SingleInstance&#x000D;&#x000A;#UseHook&#x000D;&#x000A;#Warn&#x000D;&#x000A;#WinActivateForce&#x000D;&#x000A;&apos;#A #B #C #D #E #F #G #H #I #J #K #L #M #N #O #P #Q #R #S #T #U #V #W #X #Y #Z&apos;&#x000D;&#x000A;&apos;this will not be prefix mode--I want to include all tags eventually&apos;</Keywords>
+            <Keywords name="Keywords4">&apos;this is the input keys manually processed from official help docs&apos;&#x000D;&#x000A;LButton RButton MButton XButton1 XButton2 &#x000D;&#x000A;WheelDown WheelUp WheelLeft WheelRight &#x000D;&#x000A;CapsLock Space Tab Enter Escape Esc Backspace BS &#x000D;&#x000A;ScrollLock Delete Insert Ins Home &#x000D;&#x000A;End PgUp PgDn Up Down Left Right &#x000D;&#x000A;Numpad0 NumpadIns Numpad1 NumpadEnd Numpad2 NumpadDown Numpad3 NumpadPgDn Numpad4 NumpadLeft Numpad5 NumpadClear Numpad6 NumpadRight Numpad7 NumpadHome Numpad8 NumpadUp Numpad9 NumpadPgUp NumpadDot NumpadDel NumLock NumpadDiv NumpadMult NumpadAdd NumpadSub NumpadEnter &#x000D;&#x000A;LWin RWin Control Ctrl Alt Shift LControl LCtrl RControl RCtrl LShift RShift LAlt RAlt &#x000D;&#x000A;Browser_Back Browser_Forward Browser_Refresh Browser_Stop Browser_Search Browser_Favorites Browser_Home Volume_Mute Volume_Down Volume_Up Media_Next Media_Prev Media_Stop Media_Play_Pause Launch_Mail Launch_Media Launch_App1 Launch_App2 &#x000D;&#x000A;AppsKey PrintScreen CtrlBreak Pause Break Help Sleep</Keywords>
+            <Keywords name="Keywords5"></Keywords>
+            <Keywords name="Keywords6"></Keywords>
+            <Keywords name="Keywords7"></Keywords>
+            <Keywords name="Keywords8"></Keywords>
+            <Keywords name="Delimiters">00&quot; 01` 02((&quot; EOL)) 03% 04` 05(( % EOL ; , )) 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="COMMENTS" fgColor="808080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="808080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="800080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="0000FF" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="008000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="804040" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="800080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="OPERATORS" fgColor="800000" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="008080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="008000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="004000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
