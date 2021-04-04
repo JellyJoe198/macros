@@ -28,8 +28,10 @@ http://thumbscript.com/howitworks.html
 ThumbScript is a typing system that allows you to press any letter by drawing its shape with 2 presses on the numpad.  
 This is my improved version of the [beta thumbscript autohotkey script](http://autohotkey.com/board/topic/27198-beta-thumbscript-ahk). I added a few commands that were indicated on the [thumbscript wiki](http://thumbscript.com/howitworks.html) but not the beta script.  
 I also added 2 more characters:  
-`B` backwards is `¿`  (this is mirror image of `?`)  
+`b` backwards is `¿`  (mirror image of `?`)  
 `h` backwards is `{space}`  
+
+Note: the mirror of `h` and `q` are unused combinations. They could be used as special characters in other languages or as hotkeys.
 
 Functions not yet implemented:  
 * single tap commands (for now just double tap the key)
