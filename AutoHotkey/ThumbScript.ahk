@@ -1,8 +1,8 @@
-﻿; Thumbscript By Conquer
-; http://thumbscript.com/howitworks.html
+﻿; Thumbscript By Conquer http://thumbscript.com/howitworks.html
 ; AHK script based on https://autohotkey.com/board/topic/27198-beta-thumbscript-ahk/
-; improved by [Joseph Brownlee] (github.com/jellyjoe198)
+; improved by [Joseph Brownlee](http://github.com/jellyjoe198)
 
+#NoEnv
 #SingleInstance,Force
 FileEncoding UTF-8
 SendMode,Input
@@ -29,7 +29,7 @@ Numpad9::NumCom(9)
 ;NumPadSub::Backspace
 
 CapsLockToggle:
-NumpadAdd::
+;NumpadAdd::
 disp := Caps("Toggle")
 If CapsTip = True
 {
@@ -123,8 +123,8 @@ If Char =  ; Invalid combo, clean up the com
 Send %Char%
 ;goto Cleanup
 ;return
-Cleanup:
-NumPadDiv::
+Cleanup: ;clear the variables
+~NumPadDiv:: ;slash will clean keys but ~ lets slash through.
 keeptrack=
 keys=0
 Char =
@@ -196,7 +196,6 @@ Char95 = 9
 Char64 = 0 
 ; Backwards combo of O (letter) produces 0 if you hate using the 0 button
 ; also include backwards
-; Char50 = 0
 Char51 = {!}
 Char52 = @
 Char53 = {#}
@@ -206,17 +205,14 @@ Char56 = {^}
 Char57 = &
 Char58 = *
 Char59 = `%
-Char64 = 0 
 
 ; Symbols:
 Char31 = _
-Char38 = ¿ ;0038 is & in unicode, but reverse of 18? is 38¿
 Char39 = (
 Char18 = ?
 Char19 = /
 Char29 = {`{}
 Char69 = <
-Char34 = {space}
 Char28 = |
 Char48 = =
 Char98 = '
@@ -234,4 +230,10 @@ Char97 = {"}
 Char17 = )
 Char27 = {`}}
 Char14 = `;
+
+; unofficial shortcuts
+Char38 = ¿ ;mirror of 18? is 38¿
+Char34 = {space}
+Char16 = ?authuser=1 ;switch google user
+Char61 = `%2B ;plus sign
 return
