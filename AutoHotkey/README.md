@@ -27,7 +27,7 @@ Functions not yet implemented:
 * single tap commands (for now just double tap the key)
 * Control key (currently does nothing)(I plan to make it behave like ctrl+letter, which is different from the website but IMO more useful for desktop use)
 
-### alt codes hotstrings.py
+## alt codes hotstrings.py
 **Depricated. Using Thumbscript instead.**  
 I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched the lowercase letters to 65-90 bc they are used more). This feature has the first 255 unicode windows alt codes.  
 Note: Some characters require an end character such as `.` or `enter` in order to allow 3 digit alt codes as well. May require UTF-8 to correctly show emojis. Examples below.  
