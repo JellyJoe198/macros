@@ -1,0 +1,1 @@
+These are binary compilations of the relevant AHK scripts. Not necessary unless you don't have ahk installed on your computer. Make sure to note the date and use binaries with the same date.
