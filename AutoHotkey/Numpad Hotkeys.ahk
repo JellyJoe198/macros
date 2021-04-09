@@ -19,7 +19,7 @@ TyperName := "ThumbScript"
 Try {
     TyperFile := "ThumbScript.ahk"
 } catch e {
-    MsgBox, There was an issue with fing the typer script:`n%e%
+    MsgBox, There was an issue with finding the typer script:`n%e%
 }
 Run, %TyperFile%
 
@@ -58,15 +58,15 @@ return
 CapsLock:: ; will be the menu system to toggle certain features in the future. For now it activates a plugin.
 Suspend ;suspend other hotkeys while this subprogram runs.
 SuspendTyper()
-RunWait, D:/Programs/Python/python37/My Documents/macros/AutoHotkey/plugins/nplugin wait to click.ahk
+RunWait, % A_WorkingDir . "\plugins\wait to click.ahk"
 ;, , UseErrorLevel
 
 ;MsgBox, Plugin ended with code %ErrorLevel%
 /*
-WaitingprogramLabel: ;if the subroutine "wait to click" is open, stay in this loop. Approved plugins should start with "nplugin". openFold
+WaitingprogramLabel: ;if the subroutine "wait to click" is open, stay in this loop. openFold
 loop 2 { ; repeat twice to avoid accidental errors
     Sleep 1000
-    if WinExist("nplugin")
+    if WinExist("wait to click")
         GoTo WaitingprogramLabel
 } ; closeFold
 */
