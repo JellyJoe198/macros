@@ -1,12 +1,34 @@
 ## Numpad Hotkeys
-This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through keycodes (will be thumbscript in future version). For a full list of the included hotkeys, see the `.ahk` file.<br>
-The layout of my numpad is shown below.
+This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through Thumbscript (previously unicode). For a full list of the included hotkeys, see the `.ahk` file.<br>
+The layout of the intended numpad is shown below.
 
-<img src="https://github.com/JellyJoe198/python-macros/blob/master/AutoHotkey/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
+<img src="/AutoHotkey/Images/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
 
 Note: I am currently working on a system that lets you customize your macros through AutoHotkey's GUI system.
 
-### alt codes hotstrings.py
+## Thumbscript.ahk
+http://thumbscript.com/howitworks.html  
+<img src="http://thumbscript.com/images/abcd.gif" alt="ABCD Thumbscript example" height=50></img>
+
+ThumbScript is a typing system that allows you to press any letter by drawing its shape with 2 presses on the numpad.  
+This is my improved version of the [beta thumbscript autohotkey script](http://autohotkey.com/board/topic/27198-beta-thumbscript-ahk). I added a few commands that were indicated on the [thumbscript wiki](http://thumbscript.com/howitworks.html) but not the beta script.  
+I also added a few unofficial shortcut keys:  
+
+Keys   |  character     | note | purpose  
+--     |  --            | -- | --
+Char38 | `¿`            |  mirror image of `?`, reversed `b`  
+Char34 | `{space}`      |  reversed `h` | redundant by Char22 but this evens out key wear.  
+Char16 | `?authuser=1`  | mirrored `h` | Google switch accounts  
+Char61 | `%2B`          | mirrored and reversed `h` | html plus sign  
+
+Note: the mirror of `h` and `q` are unused combinations. They could be used as special characters in other languages or as hotkeys.
+
+Functions not yet implemented:  
+* single tap commands (for now just double tap the key)
+* Control key (currently does nothing)(I plan to make it behave like ctrl+letter, which is different from the website but IMO more useful for desktop use)
+
+## alt codes hotstrings.py
+**Depricated. Using Thumbscript instead.**  
 I used Python to generate the hotstrings for typing letters and characters by inputting the alt code preceded by `00`, or `0000` for capital letters (I switched the lowercase letters to 65-90 bc they are used more). This feature has the first 255 unicode windows alt codes.  
 Note: Some characters require an end character such as `.` or `enter` in order to allow 3 digit alt codes as well. May require UTF-8 to correctly show emojis. Examples below.  
 
@@ -20,22 +42,6 @@ Input | character
 `000069` | `E`  
 
 There are also some pictures to help you with the windows alt codes, titled `unicode guide ... .png`. Choose the version that suits you better, and if you like them you could even set it as your desktop for easy reference.
-
-## Thumbscript.ahk
-http://thumbscript.com/howitworks.html  
-<img src="http://thumbscript.com/images/abcd.gif" alt="ABCD Thumbscript example" height=50></img>
-
-ThumbScript is a typing system that allows you to press any letter by drawing its shape with 2 presses on the numpad.  
-This is my improved version of the [beta thumbscript autohotkey script](http://autohotkey.com/board/topic/27198-beta-thumbscript-ahk). I added a few commands that were indicated on the [thumbscript wiki](http://thumbscript.com/howitworks.html) but not the beta script.  
-I also added 2 more characters:  
-`b` backwards is `¿`  (mirror image of `?`)  
-`h` backwards is `{space}`  
-
-Note: the mirror of `h` and `q` are unused combinations. They could be used as special characters in other languages or as hotkeys.
-
-Functions not yet implemented:  
-* single tap commands (for now just double tap the key)
-* Control key (currently does nothing)(I plan to make it behave like ctrl+letter, which is different from the website but IMO more useful for desktop use)
 
 ## quotes and commas
 this is related to Python and coding faster, like making a quoted list from just a bunch of characters. Example:  
