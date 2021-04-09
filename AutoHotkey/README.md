@@ -4,7 +4,8 @@ The layout of the intended numpad is shown below.
 
 <img src="/AutoHotkey/Images/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
 
-Note: I am currently working on a system that lets you customize your macros through AutoHotkey's GUI system.
+Note: I am currently working on a system that lets you customize your macros through AutoHotkey's GUI system.  
+You can disable ThumbScript by pressing `NumpadIns & Esc`, or by removing the `Thumbscript.ahk` file from your copy.
 
 ## Thumbscript.ahk
 http://thumbscript.com/howitworks.html  
