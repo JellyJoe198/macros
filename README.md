@@ -1,3 +1,6 @@
+# Purpose
+This repository is a collection of hotkeys and keyboard macros I have found useful. In most cases each file can stand alone as its own program. Use caution when combining.
+
 ## AutoHotkey
 AutoHotkey is streamlined for making hotkeys. Quick links: [AutoHotkey](AutoHotkey), [numpad](AutoHotkey/Numpad%20Hotkeys.ahk)  
 
