@@ -7,14 +7,14 @@ Currently the best way to pause it is to press F3 because the program will detec
 It is designed for a 800x600 window in the center of my 1920x1080 monitor, so you may have to change the numbers around for different sized monitors.
 
 ### requirements
-* Windows computer
-* Python 3.7
-  - numpy
-  - PIL
-  - cv2
-  - ctypes
-  - time
+* Python 3.7 or later
+  - numpy 	`pip install numpy`
+  - PIL 	`pip install pillow`
+  - cv2 	`pip install opencv-python-headless`
+  - ctypes (built-in)
+  - time (built-in)
 * Minecraft (for its current use but it could be easily modified for other purposes)
+* Windows computer
 
 ### Speed
 It takes about 25 minutes for this to mine 1 full layer of one 16x16 chunk (this means 5 automatic layers, user must prepare first 2 layers so this can move through them).
