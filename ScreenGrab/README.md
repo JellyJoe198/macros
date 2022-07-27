@@ -22,7 +22,7 @@ That estimate is not including time lost from items getting stuck (it may freeze
 
 ### How it works
 It reads the screen, applies a mask to prioritize certain regions, then if there is no change in the screen for a certain amount of time/frames
-it will press `a` or `s` to move left or right, and if it doesn't change after that it means the player is on a wall, so it moves forward 1 block (presses `w`) and changes direction.
+it will press `a` or `d` to move left or right, and if it doesn't change after that it means the player is on a wall, so it moves forward 1 block (presses `w`) and changes direction.
 
 ### inspiration
 This macro is heavily based on the GTA5 auto driver at https://pythonprogramming.net/game-frames-open-cv-python-plays-gta-v/  
