@@ -10,7 +10,7 @@ It is designed for a 800x600 window in the center of my 1920x1080 monitor, so yo
 * Python 3.7 or later
   - numpy 	`pip install numpy`
   - PIL 	`pip install pillow`
-  - cv2 	`pip install opencv-python-headless`
+  - cv2 	`pip install opencv-python`
   - ctypes (built-in)
   - time (built-in)
 * Minecraft (for its current use but it could be easily modified for other purposes)
