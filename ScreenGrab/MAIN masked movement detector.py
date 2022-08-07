@@ -46,8 +46,8 @@ def roi_block(img, vertices):
     return masked
 
 def process_img(image):
-    ##TO DO: add ROI mask to avoid reading hotbar bubbles and chat
-    processed_img = image
+    ## adds ROI mask to avoid reading hotbar bubbles and chat
+    # processed_img = image
     # convert to gray
     processed_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # add mask
