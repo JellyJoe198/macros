@@ -3,9 +3,8 @@
 To use, Minecraft player must be facing exactly at -0.0 or 90.0 and point straight up, and hold the mining button (can be done in 1.14+ with the F3 + T trick).
 Run `MAIN masked movement detector.py` to start the macro, and then switch to the Minecraft tab. You could also use `OLD main basic movement detector.py` for a more basic version without masking, but it is not as reliable.
 Currently the best way to pause it is to press F3 because the program will detect changes in the numbers (memory, particles, ect) and not move.  
- The mask_vertices file contains the regions on the screen that will be considered in determining if the screen is changing;
-It is designed for a 800x600 window*, so you may have to change the numbers around for different sized monitors.
- *designed to be in the center of my 1920x1080 monitor, but should also work on different sized monitors.
+ The `mask_vertices.py` file contains the regions on the screen that will be considered in determining if the screen is changing;
+It was originally designed for a 800x600 window in the center of my 1920 x 1080 monitor. To use a different size window, replace `mask_vertices.py` with one of the alternate `mask_vertices` files. The `mask_sample` picture files can also be scaled to aid the creation of new `mask_vertices` files.
 
 ### Requirements
 * Python 3.7 or later
@@ -15,7 +14,7 @@ It is designed for a 800x600 window*, so you may have to change the numbers arou
   - ctypes (built-in)
   - time (built-in)
 * Minecraft (for its current use but it could be easily modified for other purposes)
-* Windows computer? for screen reading api
+* Windows computer for screen reading api
 
 ### Speed
 It takes about 25 minutes for this to mine 1 full layer of one 16x16 chunk (this means 5 automatic layers; user must prepare first 2 layers so this can move through them). It is more time efficient to mine larger areas as the program spends less time on the edges.
