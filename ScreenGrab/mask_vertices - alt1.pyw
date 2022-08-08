@@ -1,3 +1,6 @@
+## nodes of recording window on screen
+ScreenBBox = (256,128,256+854,128+510)
+
 inventory_mask = [
 ##"filtered out":
   [234,     445],
@@ -38,5 +41,7 @@ priorities = [
 ]
 
 if __name__ == "__main__":
+  print(ScreenBBox)
+  print(inventory_mask)
   print(priorities)
   input("\npress enter to exit")

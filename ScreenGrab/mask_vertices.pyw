@@ -1,3 +1,5 @@
+ScreenBBox = (560,240,800+560,600+240)
+
 inventory_mask = [
   [218,     523],
   [218,     523+78],
@@ -37,4 +39,7 @@ priorities = [
 ]
 
 if __name__ == "__main__":
+  print(ScreenBBox)
+  print(inventory_mask)
   print(priorities)
+  input("\npress enter to exit")

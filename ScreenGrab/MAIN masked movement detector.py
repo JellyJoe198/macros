@@ -25,7 +25,7 @@ def sendinput(key, delay=.16):
     time.sleep(delay)
     ReleaseKey(key)
 
-from mask_vertices import inventory_mask, priorities
+from mask_vertices import *
 #docs.opencv.org/master/d0/d86/tutorial_py_image_arithmetics.html
 #https://stackoverflow.com/a/50159769/12541334
 #https://docs.opencv.org/2.4/modules/core/doc/operations_on_arrays.html#absdiff
@@ -64,7 +64,7 @@ def screen_record():
     diff_count = 0
     key = A #key will switch between A, W, and D
     while True:
-        screen =  np.array(ImageGrab.grab(bbox=(560,240,800+560,600+240)))
+        screen =  np.array(ImageGrab.grab(bbox=ScreenBBox))
 ##        print(end='.')
 ##        print('{} seconds'.format(round(time.time()-last_time, 3)))
 ##        print('Framerate: {}fps'.format(round(1/(time.time()-last_time), 3)))
