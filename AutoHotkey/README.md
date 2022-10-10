@@ -1,3 +1,5 @@
+General note: I would not earnestly reccomend anyone to use these hotkeys exactly as they are. These are shared so that you can learn from them and create scripts that suit your own needs. If you have questions about any of these scripts or need help setting up your own script, please reach out. I'm happy to help.  
+
 ## Numpad Hotkeys
 This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through Thumbscript (previously unicode). For a full list of the included hotkeys, see the `.ahk` file.<br>
 The layout of the intended numpad is shown below.
