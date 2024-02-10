@@ -1,12 +1,13 @@
 General note: I would not earnestly reccomend anyone to use these hotkeys exactly as they are. These are shared so that you can learn from them and create scripts that suit your own needs. If you have questions about any of these scripts or need help setting up your own script, please reach out. I'm happy to help.  
 
+Future project idea: I am interested in a program that lets you customize your macros through a GUI. This could be programmed entirely within AutoHotkey with the built-in dialogue boxes, but it would take a lot of time to get right.   
+
 ## Numpad Hotkeys
 This macro adds more functionality to my numpad, such as opening and closing browser tabs, copy/paste, ctrl z/y, music controls, and typing letters through Thumbscript (previously unicode). For a full list of the included hotkeys, see the `.ahk` file.<br>
 The layout of the intended numpad is shown below.
 
 <img src="/AutoHotkey/Images/Numpad%20layout.png?raw=true" alt="numpad layout" width="300"/>
 
-Note: I am currently working on a system that lets you customize your macros through AutoHotkey's GUI system.  
 You can disable ThumbScript by pressing `NumpadIns & Esc`, or by removing the `Thumbscript.ahk` file from your copy.
 
 ## Thumbscript.ahk
